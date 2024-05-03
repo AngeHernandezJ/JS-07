@@ -1,6 +1,7 @@
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
 
-
+//const val = localStorage.getItem('pokeId');
+//cards(fetchPokemon(val));
 
 const fetchPokemon = async (pokemon) => {
     try {

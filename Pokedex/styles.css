@@ -45,3 +45,7 @@ body {
     background-color: #616596;
     box-shadow: rgba(153, 82, 82, 0.1) 0 4px 12px;
 }
+
+#poke-name{
+    width: 100px;
+}
