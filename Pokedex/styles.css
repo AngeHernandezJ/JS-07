@@ -49,3 +49,7 @@ body {
 #poke-name{
     width: 100px;
 }
+
+#card-container{
+    height: 250px;
+}
