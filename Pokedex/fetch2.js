@@ -1,6 +1,7 @@
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
 
-//const val = localStorage.getItem('pokeId');
+const val = localStorage.getItem('pokeId');
+document.getElementById('poke-name').innerHTML = localStorage.getItem('pokeId');
 //cards(fetchPokemon(val));
 
 const fetchPokemon = async (pokemon) => {
@@ -36,6 +37,7 @@ document.getElementById('get-btn')
         console.log(pokemon.weight);
         cards(pokemon);
         console.log(pokemon);
+        document.getElementById('poke-name').value = localStorage.getItem('pokeId');
     })
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -45,6 +47,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(pokemon.name);
     console.log(pokemon.id);
     console.log(pokemon.weight);
+    document.getElementById('poke-name').value = initialId;
+    console.log("DOM fully loaded and parsed");
+    cards(pokemon);
 })
 
 
@@ -58,6 +63,7 @@ document.getElementById('previous-btn')
         console.log(pokemon.weight);
         localStorage.setItem('pokeId', pokemon.id);
         cards(pokemon);
+        document.getElementById('poke-name').value = localStorage.getItem('pokeId');
     })
 
 document.getElementById('next-btn')
@@ -70,6 +76,7 @@ document.getElementById('next-btn')
         console.log(pokemon.weight);
         localStorage.setItem('pokeId', pokemon.id);
         cards(pokemon);
+        document.getElementById('poke-name').value = localStorage.getItem('pokeId');
     })
 
 
